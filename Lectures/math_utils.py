@@ -1,0 +1,1 @@
+git git remote add origin https://github.com/yourusername/myrepo.git origin
