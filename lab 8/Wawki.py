@@ -1,11 +1,13 @@
-# Импорт необходимых модулей
+# Импорт необходимых модулей 
 import pygame, sys
 from pygame.locals import *
 import random, time
 
 # Инициализация Pygame
 pygame.init()
-
+pygame.mixer.music.load("lab 8/elements/background.wav")
+pygame.mixer.music.set_volume(0.3)
+pygame.mixer.music.play(-1)
 # Настройка FPS (кадров в секунду)
 FPS = 60
 FramePerSec = pygame.time.Clock()
@@ -137,7 +139,7 @@ while True:
 
     # Отображение счёта и количества монет
     score_text = font_small.render("Score: " + str(SCORE), True, BLACK)
-    coin_text = font_small.render("Coins: " + str(COINS), True, BLACK)
+    coin_text = font_small.render("BTS: " + str(COINS), True, BLACK)
     DISPLAYSURF.blit(score_text, (10, 10))
     DISPLAYSURF.blit(coin_text, (SCREEN_WIDTH - 100, 10))
 
